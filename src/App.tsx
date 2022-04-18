@@ -7,9 +7,10 @@ import { useHTMLAudioElement } from './audio-player/useHTMLAudioElement';
 import { useWaveRadio } from './wave-radio/useWaveRadio';
 import { WaveRadioStation } from './wave-radio/types';
 import { useDimensions } from './hooks/use-dimensions/useDimensions';
+import { TapToPlayButton } from './TapToPlayButton';
 
 function App() {
-  const [audioRef, { canPlay }] = useHTMLAudioElement();
+  const [audioRef, { canPlay, playing }, play] = useHTMLAudioElement();
 
   const { stationUrl, trackInfo } = useWaveRadio({ station: WaveRadioStation.SOVIET });
 
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <AppLayout>
+      <TapToPlayButton playing={playing} play={play} />
       <AudioPlayer src={stationUrl} setRef={audioRef} />
       <div ref={ref} style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <UnknownWavesChart dimensions={dimensions} trackInfo={trackInfo} audioElementRef={audioRef} ready={canPlay} />
