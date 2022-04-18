@@ -29,8 +29,6 @@ export const useHTMLAudioElement = (): [React.RefObject<HTMLAudioElement>, HTMLA
         setCanPlay(true);
       };
 
-      audioElement.play();
-
       audioElement.addEventListener('play', onPlay);
       audioElement.addEventListener('pause', onPause);
       audioElement.addEventListener('canplay', onCanPlay);
