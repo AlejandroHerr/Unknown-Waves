@@ -26,8 +26,8 @@ export const defaultTheme: AppTheme = {
   colors: {
     accent: colors.Amaranth,
     background: colors.CodGray,
-    primary: colors.Nobel,
-    secondary: colors.Nobel,
+    primary: colors.Alto,
+    secondary: colors.Alto,
   },
   fontFamily: {
     sans: 'Helvetica',

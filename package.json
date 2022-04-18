@@ -12,13 +12,16 @@
     "@types/node": "^16",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-helmet": "^6.1.5",
     "axios": "^0.26.1",
     "konva": "^8.3.5",
     "react": "^18",
     "react-dom": "^18",
+    "react-helmet": "^6.1.0",
     "react-konva": "^18.0.0-0",
     "react-scripts": "5",
-    "typescript": "^4"
+    "typescript": "^4",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

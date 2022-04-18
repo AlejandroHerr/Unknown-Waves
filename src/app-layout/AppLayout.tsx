@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
-
+import ReactHelmet from 'react-helmet';
 import { useAppTheme } from '../styles/useAppTheme';
 import { AppFooter } from './AppFooter';
 
@@ -21,6 +21,7 @@ export const AppLayout = ({ children }: React.PropsWithChildren<{}>) => {
         justifyContent: 'center',
       }}
     >
+      <ReactHelmet title="Unknown Waves"></ReactHelmet>
       {children}
       <AppFooter />
     </div>
